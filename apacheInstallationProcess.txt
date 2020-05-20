@@ -1,0 +1,80 @@
+ hi for install apache phpmyadmin follow these step in ubuntu 18.04
+
+
+
+1.  sudo su               //for root user
+
+2. apt-get update       // update app
+
+3. apt-get install lamp-server^      //for install lamp-server
+
+4.  php -v             // check php version     
+
+5. apt-get install phpmyadmin -y     //install php
+
+6.  cd /var/www/html/     // change directory
+
+. /var/www/html# ls -all   //to check lamp is install
+
+its show  
+
+drwxr-xr-x 2 root root  4096 May  8 16:27 .
+drwxr-xr-x 3 root root  4096 May  8 16:26 ..
+-rw-r--r-- 1 root root 10918 May  8 16:27 index.html
+
+
+7. nano info.php   //creat info file to check php version
+
+add this code  =>     <?php phpinfo(); ?>
+
+ctrl+x to save and then y .          // save the file
+
+8. mysql -u root -p       //  login in mysql
+
+9.to exit mysql command line use  quit      // use quit to exit mysql
+
+10.check http//:localhost its working
+
+check http//:localhost/info.php
+
+11. check http//:localhost/phpmyadmin/ its not working
+
+
+12.  Paste in terminal, this will open in the terminal Nano editor: 
+
+   root@arun-Inspiron-3542:/#      nano /etc/apache2/apache2.conf     // open file to edit below coomand Include /etc/phpmyadmin/apache.conf
+
+
+
+
+13.Then add the following line to the end of the file: 
+
+  Include /etc/phpmyadmin/apache.conf
+
+  ctrl-o and ctrl-x to save and exit.
+
+14.root@arun-Inspiron-3542:/#     /etc/init.d/apache2 restart            ///restart server
+
+
+ check http//:localhost/phpmyadmin/ again its not working when we login in phpmyadmin
+
+
+15. root@arun-Inspiron-3542:/# mysql -u root -p  /// add user for login in phpmyadmin
+
+Enter password: pasword which is set during phpmyadim install
+
+
+16. CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';               // create user to login in phpmyadmin   u can change what ever u need admin 										name and  password
+
+17. GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;
+
+18. check http//:localhost/phpmyadmin/ its  working when we login in phpmyadmin with user:- admin and password:-  admin
+
+
+
+
+
+
+
+
+

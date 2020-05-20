@@ -1,0 +1,64 @@
+wordpress 
+
+1. first to go in dicretory 
+
+cd /var/www/html
+
+2 to install wordress 
+
+ sudo wget https://wordpress.org/latest.tar.gz
+
+3 now  ( latest.tar.gz zip ) file is created to un zip the file use this command 
+
+sudo tar xvfz latest.tar.gz
+
+now  wordpress folder will show in list
+
+4. after un zip file check the wordpress file premission by using this command 
+
+ls -la
+
+5. if the wordpress shows this 
+
+drwxr-xr-x  5 nobody nogroup     4096 Apr 30 00:28  wordpress
+
+6. then use this command to change the premission of wordpress folder 
+
+ sudo chown www-data.www-data  wordpress/
+
+7. after using this command it should be look like this 
+
+
+drwxr-xr-x  5 www-data www-data     4096 Apr 30 00:28  wordpress
+
+8. now wordpress is working to check this .use localhost/worderss now the wordpress page will appear on screen 
+
+9.now we create datebase using command line so use this command to intreact with mysql.
+
+10.  mysql -u root -p   after using this command it should ask for password . so engter the database password like "in my case it should 'password'".
+
+11. to show database list use  this command 
+
+show databases;
+
+12. gto create database use this command 
+
+create database <your database name> ;
+
+13. so  finally we done all step to install wordpress.
+
+14. then go on localhost/wordpress and fill all detail provided by wordpress.
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+
+
+Process to install composer in ubuntu 18.04
+
+Follow the command to install composer
+
+1. sudo apt update
+
+2. sudo apt install wget php-cli php-zip unzip
+
+3. php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+4. HASH="$(wget -q -O - https://composer.github.io/installer.sig)"
+
+5. php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+  		Output:
+		Installer verified
+
+6. sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+	Output:
+	All settings correct for using Composer
+	Downloading...
+
+	Composer (version 1.8.5) successfully installed to: /usr/local/bin/composer
+	Use it: php /usr/local/bin/composer
+
+
+
+7. composer   /// verify if composer is install or not
+
+
+output 
+
+	______
+/ ____/___  ____ ___  ____  ____  ________  _____
+/ /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
