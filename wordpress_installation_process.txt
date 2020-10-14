@@ -50,6 +50,11 @@ create database <your database name> ;
 14. then go on localhost/wordpress and fill all detail provided by wordpress.
 
 
+15. if theme and plugin are not installed use these command
+
+    sudo chown -R www-data.www-data ecommerce
+
+
 
 
  
