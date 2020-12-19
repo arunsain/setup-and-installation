@@ -1,0 +1,21 @@
+
+1.  remove node js from ubuntu 18.04
+
+
+		sudo apt-get remove nodejs
+
+		sudo apt-get purge nodejs
+
+		sudo apt-get autoremove // this is not important
+
+		which node
+
+		sudo rm -rf /usr/local/bin/node
+
+2. 	install nodjs in ubuntu 18.04
+
+	  sudo apt update
+
+	  sudo npm cache clean -f
+	  sudo npm install -g n
+	  sudo n stable
