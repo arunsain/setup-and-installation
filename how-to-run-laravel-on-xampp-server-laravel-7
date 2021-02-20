@@ -1,0 +1,21 @@
+how to run laravel on xampp server without using php artisan command.
+
+
+1. Move public/index.php file to  root directory.
+
+2. Move public/.htaccess file to  root directory.
+
+
+3.Make  changes in index.php file 
+
+   require __DIR__.'/../vendor/autoload.php';   to =>       require __DIR__.'/vendor/autoload.php';
+
+   AND 
+
+   $app = require_once __DIR__.'/../bootstrap/app.php';  to =>  $app = require_once __DIR__.'/bootstrap/app.php';
+
+
+
+1 . If Your app css is not working add  this line  in .env  file 
+
+ 		ASSET_URL=public   
