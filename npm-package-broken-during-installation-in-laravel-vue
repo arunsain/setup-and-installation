@@ -1,1 +1,35 @@
+------->facing this type of error<------
 
+
+> @ development C:\xampp\htdocs\codetinerant
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js
+
+'cross-env' is not recognized as an internal or external command,
+operable program or batch file.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ development: `cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the @ development script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\Garciano\AppData\Roaming\npm-cache\_logs\2018-02-17T10_08_34_901Z-debug.log
+
+
+
+use this command to over come this error
+
+
+                rm -rf node_modules
+
+                rm package-lock.json yarn.lock
+
+                npm cache clear --force
+
+                npm install cross-env /// this is not important 
+
+                npm install 
+
+                npm run watch
